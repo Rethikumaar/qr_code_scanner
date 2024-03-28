@@ -35,7 +35,8 @@ android {
     defaultConfig {
         applicationId "net.touchcapture.qr.flutterqrexample"
         // minSdkVersion is determined by Native View.
-        minSdkVersion 20
+        multiDexEnabled true
+        minSdkVersion 21
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -56,6 +57,7 @@ flutter {
 }
 
 dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
